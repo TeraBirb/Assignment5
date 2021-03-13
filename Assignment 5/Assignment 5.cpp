@@ -10,6 +10,7 @@ int main()
 {
     // 1. Vowels and consonants
 
+    
     string wordInput;
     int vowelCount = 0;
     int consonantCount = 0;
@@ -38,8 +39,6 @@ int main()
         default :
             cout << "The word contains " << vowelCount << " vowels and " << consonantCount << " consonants." << endl << endl;
     }
-
-    
 
     /*
         OUTPUT
@@ -96,7 +95,76 @@ int main()
     // 3. Interest and Mortgage Payment
 
 
+    double principal = 0;
+    double years = 0;
+    double interestRate = 0;
+    double monthlyInterestRate = 0;
+    double monthlyPayment = 0;
 
+    cout << "Welcome to the Mortgage Calculator. First, enter your principal: ";
+    cin >> principal;
+    cout << "Second, enter the length of the year term: ";
+    cin >> years;
+    cout << "Finally, enter your interest rate: ";
+    cin >> interestRate;
+
+    monthlyInterestRate = (interestRate / 12) / 100;
+    monthlyPayment = (principal * monthlyInterestRate) / (1 - (1 / (pow( ( 1 + monthlyInterestRate), (years * 12) ) ) ) );
+
+    cout << endl << "Your principal amount is $" << principal << ". Your yearly rate is " << interestRate << "%. Your number of years is " << years << ". " << endl;
+    cout << "Your monthly payment is $" << monthlyPayment << "." << endl << endl;
+
+    /*
+        OUTPUT
+  a)
+    Welcome to the Mortgage Calculator. First, enter your principal: 250000
+    Second, enter the length of the year term: 30
+    Finally, enter your interest rate: 6
+
+    Your principal amount is $250000. Your yearly rate is 6%. Your number of years is 30.
+    Your monthly payment is $1498.88.
+
+
+    C:\Users\User\code\school_bcc\Assignment 5\Debug\Assignment 5.exe (process 672) exited with code 0.
+    Press any key to close this window . . .
+
+  b)
+    Welcome to the Mortgage Calculator. First, enter your principal: 250000
+    Second, enter the length of the year term: 30
+    Finally, enter your interest rate: 7.5
+
+    Your principal amount is $250000. Your yearly rate is 7.5%. Your number of years is 30.
+    Your monthly payment is $1748.04.
+
+
+    C:\Users\User\code\school_bcc\Assignment 5\Debug\Assignment 5.exe (process 6996) exited with code 0.
+    Press any key to close this window . . .
+
+  c)
+    Welcome to the Mortgage Calculator. First, enter your principal: 250000
+    Second, enter the length of the year term: 15
+    Finally, enter your interest rate: 6
+
+    Your principal amount is $250000. Your yearly rate is 6%. Your number of years is 15.
+    Your monthly payment is $2109.64.
+
+
+    C:\Users\User\code\school_bcc\Assignment 5\Debug\Assignment 5.exe (process 1832) exited with code 0.
+    Press any key to close this window . . .
+
+  d)
+    Welcome to the Mortgage Calculator. First, enter your principal: 500000
+    Second, enter the length of the year term: 30
+    Finally, enter your interest rate: 6
+
+    Your principal amount is $500000. Your yearly rate is 6%. Your number of years is 30.
+    Your monthly payment is $2997.75.
+
+
+    C:\Users\User\code\school_bcc\Assignment 5\Debug\Assignment 5.exe (process 13740) exited with code 0.
+    Press any key to close this window . . .    
+    
+    */
 
 }
 
